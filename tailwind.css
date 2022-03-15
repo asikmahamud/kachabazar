@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    body{
+        @apply font-open-sans
+    }
+  
+    h1,h2,h3,h4,h5,h6{
+        @apply font-inter font-semibold text-gray-800
+    }
+  
+    p{
+        @apply text-gray-500
+    }
+  }
+  
+  @layer components{
+      .primary-btn{
+          @apply text-white bg-primary rounded-full  py-2 px-8 hover:bg-primary-dark transition text-sm font-medium
+      }
+  }
