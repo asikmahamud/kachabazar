@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>kachabazar | conditions</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Open+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- head line -->
+
+  <div class="py-2 hidden lg:block">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between text-sm">
+        <!-- left -->
+        <span class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M16 8l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2M5 3a2 2 0 00-2 2v1c0 8.284 6.716 15 15 15h1a2 2 0 002-2v-3.28a1 1 0 00-.684-.948l-4.493-1.498a1 1 0 00-1.21.502l-1.13 2.257a11.042 11.042 0 01-5.516-5.517l2.257-1.128a1 1 0 00.502-1.21L9.228 3.683A1 1 0 008.279 3H5z" />
+          </svg>
+          We are available 24/7, Need help? Call Us:
+          <a href="#" class="text-green-600 text-sm font-semibold ml-1 font-open-sans">+01234560352</a>
+        </span>
+        <!-- right -->
+        <div class="flex items-center">
+          <a href="aboutus.html" class="hover:text-green-600 transition">About Us</a>
+          <span class="px-2">|</span>
+          <a href="contactus.html" class="hover:text-green-600 transition">Contact Us</a>
+          <span class="px-2">|</span>
+          <button class="login-regestar hover:text-green-600 transition">My account</button>
+          <span class="px-2">|</span>
+          <button class="login-regestar flex items-center hover:text-green-600 transition">
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+            </span>
+            Login
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- ------header--------- -->
+<div class="sticky top-0 z-20">
+  <div class="bg-emerald-500 py-4">
+    <div class="container">
+      <!-- top -->
+      <div class="flex items-center justify-between ">
+        <!-- logo -->
+        <a href="#" class="hidden lg:block"><img src="img/logo-light.svg" class="w-28 h-full" /></a>
+        <!-- input -->
+        <div class="w-full lg:w-[700px] relative">
+          <input type="text" placeholder="Search for products (e.g. fish, apple, oil)"
+            class="w-full pl-3 py-3 rounded-md outline-none text-sm" />
+          <button class="absolute w-10 h-full flex items-center justify-center top-0 right-0"><svg
+              xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg></button>
+        </div>
+        <!-- icon -->
+        <div class="hidden lg:flex space-x-4">
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+            </svg>
+          </button>
+          <button id="shoping-btn" class="relative">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+            <span
+              class="bg-red-500 p-1 h-5 w-5 absolute flex items-center justify-center -top-2 -right-2 text-white text-xs rounded-full">3</span>
+          </button>
+          <button class="login-regestar">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-3 border border-b-gray-200 bg-white hidden lg:block">
+    <div class="container">
+      <div class="flex justify-between">
+        <!-- left -->
+        <div class="flex">
+          <div class="relative">
+            <button id="open-itemscart" class="flex items-center mr-4 pr-2 hover:text-primary duration-100">
+              <span>Categories</span><span class="ml-1"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4"
+                  viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd" /></svg>
+              </span>
+            </button>
+            <div id="items-cart"
+              class="hidden absolute top-8 w-72 h-[500px] rounded-lg shadow-xl bg-white border border-gray-300 z-50 opacity-100 p-4 ">
+              <div class="grid gap-1">
+                <a href="#" class="flex items-center py-2 px-2 group hover:bg-gray-50 transition duration-150">
+                  <span><img src="img/macccc).webp" class="w-5 h-5"></span>
+                  <div class="inline-flex items-center w-full justify-between ml-3">
+                    <span class="text-sm group-hover:text-primary">Fish & Meat</span>
+                    <span><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                          clip-rule="evenodd" />
+                      </svg></span>
+                  </div>
+                </a>
+                <a href="#" class="flex items-center py-2 px-2 group hover:bg-gray-50 transition duration-150">
+                  <span><img src="img/nnnnnnnnn).webp" class="w-5 h-5"></span>
+                  <div class="inline-flex items-center w-full justify-between ml-3">
+                    <span class="text-sm group-hover:text-primary">Fruits & Vegetable</span>
+                    <span><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                          clip-rule="evenodd" />
+                      </svg></span>
+                  </div>
+                </a>
+                <a href="#" class="flex items-center py-2 px-2 group hover:bg-gray-50 transition duration-150">
+                  <span><img src="img/fbb.webp" class="w-5 h-5"></span>
+                  <div class="inline-flex items-center w-full justify-between ml-3">
+                    <span class="text-sm group-hover:text-primary">Fresh Seafood</span>
+                    <span><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                          clip-rule="evenodd" />
+                      </svg></span>
+                  </div>
+                </a>
+                <a href="#" class="flex items-center py-2 px-2 group hover:bg-gray-50 transition duration-150">
+                  <span><img src="img/ppppppp).webp" class="w-5 h-5"></span>
+                  <div class="inline-flex items-center w-full justify-between ml-3">
+                    <span class="text-sm group-hover:text-primary">Cooking Essentials</span>
+                    <span><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                          clip-rule="evenodd" />
+                      </svg></span>
+                  </div>
+                </a>
+                <a href="#" class="flex items-center py-2 px-2 group hover:bg-gray-50 transition duration-150">
+                  <span><img src="img/qqqqqqqqqqqq).webp" class="w-5 h-5"></span>
+                  <div class="inline-flex items-center w-full justify-between ml-3">
+                    <span class="text-sm group-hover:text-primary">Breakfast</span>
+                    <span><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                          clip-rule="evenodd" />
+                      </svg></span>
+                  </div>
+                </a>
+                <a href="#" class="flex items-center py-2 px-2 group hover:bg-gray-50 transition duration-150">
+                  <span><img src="img/drinkkkkk).webp" class="w-5 h-5"></span>
+                  <div class="inline-flex items-center w-full justify-between ml-3">
+                    <span class="text-sm group-hover:text-primary">Drinks</span>
+                    <span><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                          clip-rule="evenodd" />
+                      </svg></span>
+                  </div>
+                </a>
+                <a href="#" class="flex items-center py-2 px-2 group hover:bg-gray-50 transition duration-150">
+                  <span><img src="img/xxxxxx (1).webp" class="w-5 h-5"></span>
+                  <div class="inline-flex items-center w-full justify-between ml-3">
+                    <span class="text-sm group-hover:text-primary">Milk & Dairy</span>
+                    <span><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                          clip-rule="evenodd" />
+                      </svg></span>
+                  </div>
+                </a>
+                <a href="#" class="flex items-center py-2 px-2 group hover:bg-gray-50 transition duration-150">
+                  <span><img src="img/orangggggg1).webp" class="w-5 h-5"></span>
+                  <div class="inline-flex items-center w-full justify-between ml-3">
+                    <span class="text-sm group-hover:text-primary">Organic Food</span>
+                    <span><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                          clip-rule="evenodd" />
+                      </svg></span>
+                  </div>
+                </a>
+                <a href="#" class="flex items-center py-2 px-2 group hover:bg-gray-50 transition duration-150">
+                  <span><img src="img/honyyyyyyy.webp" class="w-5 h-5"></span>
+                  <div class="inline-flex items-center w-full justify-between ml-3">
+                    <span class="text-sm group-hover:text-primary">Honey</span>
+                    <span><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                          clip-rule="evenodd" />
+                      </svg></span>
+                  </div>
+                </a>
+                <a href="#" class="flex items-center py-2 px-2 group hover:bg-gray-50 transition duration-150">
+                  <span><img src="img/soucessssss.webp" class="w-5 h-5"></span>
+                  <div class="inline-flex items-center w-full justify-between ml-3">
+                    <span class="text-sm group-hover:text-primary">Sauces & Pickles</span>
+                    <span><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                          clip-rule="evenodd" />
+                      </svg></span>
+                  </div>
+                </a>
+                <a href="#" class="flex items-center py-2 px-2 group hover:bg-gray-50 transition duration-150">
+                  <span><img src="img/jammmmmm).webp" class="w-5 h-5"></span>
+                  <div class="inline-flex items-center w-full justify-between ml-3">
+                    <span class="text-sm group-hover:text-primary">Jam & Jelly</span>
+                    <span><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                          clip-rule="evenodd" />
+                      </svg></span>
+                  </div>
+                </a>
+                <a href="#" class="flex items-center py-2 px-2 group hover:bg-gray-50 transition duration-150">
+                  <span><img src="img/potetoooo).webp" class="w-5 h-5"></span>
+                  <div class="inline-flex items-center w-full justify-between ml-3">
+                    <span class="text-sm group-hover:text-primary">Snacks & Instant</span>
+                    <span><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                          clip-rule="evenodd" />
+                      </svg></span>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+          </div>
+          <a href="aboutus.html" class="mx-4 px-2 hover:text-primary duration-100">About Us</a>
+          <a href="contactus.html" class="mx-4 px-2 hover:text-primary duration-100">Contact Us</a>
+          <div class="relative">
+            <button id="open-pages"
+              class="flex items-center mx-4 px-2 hover:text-primary duration-100"><span>Pages</span><span
+                class="ml-1"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                  fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+                </svg></span>
+            </button>
+            <div id="pages-details"
+              class="hidden absolute top-8 w-72 h-[400px] rounded-lg shadow-xl bg-white border border-gray-300 z-50 opacity-100 p-4 ">
+              <div class="grid gap-1">
+                <a href="offer.html"
+                  class="flex items-center py-2 px-2 group hover:bg-gray-100 transition duration-150 text-md hover:text-primary">
+                  <span><svg xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 text-gray-600 mr-2 group-hover:text-primary duration-150" fill="none"
+                      viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+                    </svg></span>
+                  Offer
+                </a>
+                <a href="index.html"
+                  class="flex items-center py-2 px-2 group hover:bg-gray-100 transition duration-150 text-md hover:text-primary">
+                  <span><svg xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 text-gray-600 mr-2 group-hover:text-primary duration-150" fill="none"
+                      viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg></span>
+                  Checkout
+                </a>
+                <a href="frequently.html"
+                  class="flex items-center py-2 px-2 group hover:bg-gray-100 transition duration-150 text-md hover:text-primary">
+                  <span><svg xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 text-gray-600 mr-2 group-hover:text-primary duration-150" fill="none"
+                      viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg></span>
+                  FAQ
+                </a>
+                <a href="aboutus.html"
+                  class="flex items-center py-2 px-2 group hover:bg-gray-100 transition duration-150 text-md hover:text-primary">
+                  <span><svg xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 text-gray-600 mr-2 group-hover:text-primary duration-150" fill="none"
+                      viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg></span>
+                  About Us
+                </a>
+                <a href="contactus.html"
+                  class="flex items-center py-2 px-2 group hover:bg-gray-100 transition duration-150 text-md hover:text-primary">
+                  <span><svg xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 text-gray-600 mr-2 group-hover:text-primary duration-150" fill="none"
+                      viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M16 8l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2M5 3a2 2 0 00-2 2v1c0 8.284 6.716 15 15 15h1a2 2 0 002-2v-3.28a1 1 0 00-.684-.948l-4.493-1.498a1 1 0 00-1.21.502l-1.13 2.257a11.042 11.042 0 01-5.516-5.517l2.257-1.128a1 1 0 00.502-1.21L9.228 3.683A1 1 0 008.279 3H5z" />
+                    </svg></span>
+                  Contact Us
+                </a>
+                <a href="privacy.html"
+                  class="flex items-center py-2 px-2 group hover:bg-gray-100 transition duration-150 text-md hover:text-primary">
+                  <span><svg xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 text-gray-600 mr-2 group-hover:text-primary duration-150" fill="none"
+                      viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                    </svg></span>
+                  Privacy Policy
+                </a>
+                <a href="conditions.html"
+                  class="flex items-center py-2 px-2 group hover:bg-gray-100 transition duration-150 text-md hover:text-primary">
+                  <span><svg xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 text-gray-600 mr-2 group-hover:text-primary duration-150" fill="none"
+                      viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg></span>
+                  Terms & Condition
+                </a>
+                <a href="404.html"
+                  class="flex items-center py-2 px-2 group hover:bg-gray-100 transition duration-150 text-md hover:text-primary">
+                  <span><svg xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 text-gray-600 mr-2 group-hover:text-primary duration-150" fill="none"
+                      viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg></span>
+                  404
+                </a>
+              </div>
+            </div>
+
+          </div>
+          <a href="offer.html"
+            class="relative bg-red-100 mx-4 px-2 hover:text-primary duration-100 text-red-500">Offers <div
+              class="absolute h-2 w-2 left-auto -top-1 -right-1 bg-red-500 rounded-full"></div></a>
+        </div>
+        <!-- right -->
+        <div>
+          <a href="privacy.html" class="mx-3 px-2 hover:text-primary duration-100">Privacy Policy</a>
+          <a href="conditions.html" class="ml-3 pl-2 hover:text-primary duration-100">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- md:footer -->
+  <footer class="lg:hidden fixed z-30 bottom-0 bg-primary w-full h-16 flex items-center justify-between px-3 sm:px-10">
+    <div class="container flex items-center justify-between">
+      <button class="flex items-center justify-center flex-shrink-0 h-auto relative focus:outline-none">
+        <span class="text-xl text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </span>
+      </button>
+      <a href="#" class="text-xl text-white"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        </svg></a>
+      <button class="h-9 w-9 relative whitespace-nowrap inline-flex items-center justify-center text-white text-lg">
+        <span
+          class="absolute z-10 top-0 right-0 inline-flex items-center justify-center p-1 h-5 w-5 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 bg-red-500 rounded-full">1</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+          stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
+      </button>
+      <button class="flex items-center justify-center flex-shrink-0 h-auto relative focus:outline-none">
+        <span class="text-xl text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+          </svg>
+        </span>
+      </button>
+    </div>
+  </footer>
+  <!-- conditions-section -->
+<div class="bg-gray-50">
+  <div class="flex justify-center py-10 lg:py-20 bg-indigo-100 w-full bg-cover bg-no-repeat bg-bottom" style="background-image: url(img/page-header-bg.jpg);">
+      <div class="flex mx-auto w-full max-w-2xl px-3 sm:px-10">
+          <div class="w-full flex justify-center flex-col relative">
+              <h2 class="text-xl md:text-3xl lg:text-4xl text-center">Terms & Conditions</h2>
+          </div>
+      </div>
+  </div>
+  <div class="bg-white">
+      <div class="w-full mx-auto lg:py-20 py-10 px-3 sm:px-10 container">
+          <div class="mb-8">
+              <h2 class="text-xl xl:text-2xl xl:leading-7 mb-2 lg:mb-4">Welcome to KachaBazar!</h2>
+              <div class="leading-7">
+                  <p>These terms and conditions outline the rules and regulations for the use of KachaBazar's Website, located at https://kachabazar.com/. By accessing this website we assume you accept these terms and conditions. Do not continue to use KachaBazar if you do not agree to take all of the terms and conditions stated on this page.</p>
+                  <p>The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: "Client", "You" and "Your" refers to you, the person log on this website and compliant to the Company’s terms and conditions. "The Company", "Ourselves", "We", "Our" and "Us", refers to our Company. "Party", "Parties", or "Us", refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of meeting the Client’s needs in respect of provision of the Company’s stated services, in accordance with and subject to, prevailing law of Netherlands. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.</p>
+              </div>
+          </div>
+          <div class="mb-6 lg:mb-12">
+              <h2 class="text-xl xl:text-2xl xl:leading-7 mb-2 lg:mb-4">Cookies</h2>
+              <div class="leading-7">
+                  <p>We employ the use of cookies. By accessing KachaBazar, you agreed to use cookies in agreement with the KachaBazar's Privacy Policy. Most interactive websites use cookies to let us retrieve the user’s details for each visit. Cookies are used by our website to enable the functionality of certain areas to make it easier for people visiting our website. Some of our affiliate/advertising partners may also use cookies.</p>
+              </div>
+          </div>
+          <div class="mb-8 lg:mb-12">
+              <h2 class="text-xl xl:text-2xl xl:leading-7 mb-2 lg:mb-4">License</h2>
+              <div class="leading-7">
+                  <p>Unless otherwise stated, KachaBazar and/or its licensors own the intellectual property rights for all material on KachaBazar. All intellectual property rights are reserved. You may access this from KachaBazar for your own personal use subjected to restrictions set in these terms and conditions.This Agreement shall begin on the date hereof. Our Terms and Conditions were created with the help of the Terms And Conditions Generator.</p>
+                  <ul>
+                      <strong class="mb-2">You must not:</strong>
+                      <li>1. Identifiers (e.g. name, mailing address, email address, phone number, credit/debit card number)</li>
+                      <li>2. Characteristics of protected classifications (e.g. gender, age)</li>
+                      <li>3. Commercial information (e.g. products or services purchased, purchase history)</li>
+                      <li>4. Internet or other electronic network activity (e.g. browse or search history)</li>
+                      <li> 5. Geo location data (e.g. latitude or longitude)</li>
+                      <li>6. Audio, electronic, visual, or similar information (e.g. recording of Guest service calls)</li>
+                      <li>7. Inferences drawn from any of the above (e.g. preferences or characteristics)</li>
+                  </ul>
+                  <p>Parts of this website offer an opportunity for users to post and exchange opinions and information in certain areas of the website. KachaBazar does not filter, edit, publish or review Comments prior to their presence on the website. Comments do not reflect the views and opinions of KachaBazar,its agents and/or affiliates. Comments reflect the views and opinions of the person who post their views and opinions. To the extent permitted by applicable laws, KachaBazar shall not be liable for the Comments or for any liability, damages or expenses caused and/or suffered as a result of any use of and/or posting of and/or appearance of the Comments on this website.</p>
+              </div>
+              <div class="my-6 lg:my-8">
+                  <h2 class="text-xl xl:text-2xl xl:leading-7 mb-2 lg:mb-4">Content Liability</h2>
+                  <div class="leading-7">
+                      <p>We shall not be hold responsible for any content that appears on your Website. You agree to protect and defend us against all claims that is rising on your Website. No link(s) should appear on any Website that may be interpreted as libelous, obscene or criminal, or which infringes, otherwise violates, or advocates the infringement or other violation of, any third party rights.Without prior approval and written permission, you may not create frames around our Webpages that alter in any way the visual presentation or appearance of our Website.</p>
+                  </div>
+              </div>
+              <div class="my-6 lg:my-8">
+                  <h2 class="text-xl xl:text-2xl xl:leading-7 mb-2 lg:mb-4">Your Privacy</h2>
+                  <div class="leading-7">
+                      <p>Please read <a class="text-primary" href="#">Privacy Policy</a> </p>
+                  </div>
+              </div>
+              <div class="my-6 lg:my-8">
+                  <h2 class="text-xl xl:text-2xl xl:leading-7 mb-2 lg:mb-4">Reservation of Rights</h2>
+                  <div class="leading-7">
+                      <p>We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amen these terms and conditions and it’s linking policy at any time. By continuously linking to our Website, you agree to be bound to and follow these linking terms and conditions./</p>
+                  </div>
+              </div>
+              <div class="my-6 lg:my-8">
+                  <h2 class="text-xl xl:text-2xl xl:leading-7 mb-2 lg:mb-4">Removal of links from our website</h2>
+                  <div class="leading-7">
+                      <p>If you find any link on our Website that is offensive for any reason, you are free to contact and inform us any moment. We will consider requests to remove links but we are not obligated to or so or to respond to you directly. We do not ensure that the information on this website is correct, we do not warrant its completeness or accuracy; nor do we promise to ensure that the website remains available or that the material on the website is kept up to date.</p>
+                  </div>
+              </div>
+              <div class="my-6 lg:my-8">
+                  <h2 class="text-xl xl:text-2xl xl:leading-7 mb-2 lg:mb-4">Disclaimer</h2>
+                  <div class="leading-7">
+                      <p>To the maximum extent permitted by applicable law, we exclude all representations, warranties and conditions relating to our website and the use of this website. Nothing in this disclaimer will:</p>
+                      <ul>
+                          <li>1. limit or exclude our or your liability for death or personal injury;</li>
+                          <li>2. limit or exclude our or your liability for fraud or fraudulent misrepresentation;</li>
+                          <li>3. limit any of our or your liabilities in any way that is not permitted under applicable law; or</li>
+                          <li>4. exclude any of our or your liabilities that may not be excluded under applicable law.</li>
+                      </ul>
+                      <p>The limitations and prohibitions of liability set in this Section and elsewhere in this disclaimer: (a) are subject to the preceding paragraph; and (b) govern all liabilities arising under the disclaimer, including liabilities arising in contract, in tort and for breach of statutory duty. As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+  <!-- section-6------------------ -->
+  <div class="bg-indigo-50 py-10 lg:py-16">
+    <div class="container">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 items-center gap-3">
+        <!-- left -->
+        <div class="hidden md:block flex-grow">
+          <img src="img/app-download-img-left.webp" alt="">
+        </div>
+        <!-- middle -->
+        <div class="text-center">
+          <h3 class="text-xl lg:text-2xl font-bold mb-3">Get Your Daily Needs From Our KachaBazar Store</h3>
+          <p class="text-base opacity-90 leading-7">There are many products you will find our shop, Choose your daily
+            necessary product from our KachaBazar shop and get some special offer.</p>
+          <div class="flex mt-10 gap-2">
+            <a href="https://www.apple.com/app-store/"><img src="img/app-store.svg" class=""></a>
+            <a href="https://play.google.com/store/apps"><img src="img/play-store.svg" class=""></a>
+          </div>
+        </div>
+        <!-- right -->
+        <div class="flex-grow hidden lg:block">
+          <img src="img/app-download-img.webp" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- section-7 ------------------>
+
+  <div class="py-6 hidden lg:block">
+    <div class="container">
+      <div class="grid grid-cols-4">
+        <div class="flex items-center justify-center border-r border-gray-200 bg-white py-1">
+          <div class="mr-3">
+            <i class="fa-solid fa-truck text-primary"></i>
+          </div>
+          <div class="">
+            <span class="block text-sm font-medium leading-5">Free Shipping From $500.00</span>
+          </div>
+        </div>
+        <div class="flex items-center justify-center border-r border-gray-200 bg-white py-1">
+          <div class="mr-3">
+            <i class="fa-solid fa-phone text-primary"></i>
+          </div>
+          <div class="">
+            <span class="block text-sm font-medium leading-5">Support 24/7 At Anytime</span>
+          </div>
+        </div>
+        <div class="flex items-center justify-center border-r border-gray-200 bg-white py-1">
+          <div class="mr-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+            </svg>
+          </div>
+          <div class="">
+            <span class="block text-sm font-medium leading-5">Secure Payment Totally Safe</span>
+          </div>
+        </div>
+        <div class="flex items-center justify-center border-r border-gray-200 bg-white py-1">
+          <div class="mr-3">
+            <i class="fa-solid fa-gift text-primary"></i>
+          </div>
+          <div class="">
+            <span class="block text-sm font-medium leading-5">Latest Offer Upto 20% Off</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="hr-line">
+  </hr>
+  <!-- footer----------- -->
+  <div class="bg-white border-t border-gray-100 w-full">
+    <!-- footer menu -->
+    <div
+      class="grid grid-cols-2 md:grid-cols-6 gap-5 sm:gap-9 lg:grid-cols-12 lg:py-16 py-10 justify-between container">
+      <div class="pb-3.5 sm:pb-0 col-span-1 md:col-span-2 lg:col-span-3">
+        <h3 class="text-md lg:leading-7 font-medium mb-4 sm:mb-5 lg:mb-6 pb-0.5">Company</h3>
+        <ul class="text-sm flex flex-col space-y-3">
+          <li class="flex items-baseline"><a class="text-gray-600 inline-block w-full hover:text-primary" href="#">About
+              Us</a></li>
+          <li class="flex items-baseline"><a class="text-gray-600 inline-block w-full hover:text-primary"
+              href="#">Contact us</a></li>
+          <li class="flex items-baseline"><a class="text-gray-600 inline-block w-full hover:text-primary"
+              href="#">Careers</a></li>
+          <li class="flex items-baseline"><a class="text-gray-600 inline-block w-full hover:text-primary"
+              href="#">Latest news</a></li>
+        </ul>
+      </div>
+      <div class="pb-3.5 sm:pb-0 col-span-1 md:col-span-2 lg:col-span-3">
+        <h3 class="text-md lg:leading-7 font-medium mb-4 sm:mb-5 lg:mb-6 pb-0.5">Top Category</h3>
+        <ul class="text-sm flex flex-col space-y-3">
+          <li class="flex items-baseline"><a class="text-gray-600 inline-block w-full hover:text-primary" href="#">Fish
+              & Meat</a></li>
+          <li class="flex items-baseline"><a class="text-gray-600 inline-block w-full hover:text-primary" href="#">Soft
+              Drinks</a></li>
+          <li class="flex items-baseline"><a class="text-gray-600 inline-block w-full hover:text-primary" href="#">Baby
+              Care</a></li>
+          <li class="flex items-baseline"><a class="text-gray-600 inline-block w-full hover:text-primary"
+              href="#">Beauty & Health</a></li>
+        </ul>
+      </div>
+      <div class="pb-3.5 sm:pb-0 col-span-1 md:col-span-2 lg:col-span-3">
+        <h3 class="text-md lg:leading-7 font-medium mb-4 sm:mb-5 lg:mb-6 pb-0.5">My Account</h3>
+        <ul class="text-sm flex flex-col space-y-3">
+          <li class="flex items-baseline"><a class="text-gray-600 inline-block w-full hover:text-primary"
+              href="#">Dashboard</a></li>
+          <li class="flex items-baseline"><a class="text-gray-600 inline-block w-full hover:text-primary" href="#">My
+              Orders</a></li>
+          <li class="flex items-baseline"><a class="text-gray-600 inline-block w-full hover:text-primary"
+              href="#">Recent Orders</a></li>
+          <li class="flex items-baseline"><a class="text-gray-600 inline-block w-full hover:text-primary"
+              href="#">Updated Profile</a></li>
+        </ul>
+      </div>
+      <div class="pb-3.5 sm:pb-0 col-span-1 md:col-span-2 lg:col-span-3">
+        <a href="#" class="mr-3 lg:mr-8"><img src="img/logo-colorrrrrrrr.svg" alt=""></a>
+        <p class="leading-7 text-sm text-gray-600 mt-3">
+          <span>987 Andre Plain Suite High Street 838,<br>Lake Hestertown, USA</span>
+          <br>
+          <span>Tell: 02.356.1666</span>
+          <br>
+          <span>Email: ccruidk@test.com</span>
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <!-- footer call us -->
+      <div class="px-10 bg-gray-50 shadow-sm border border-gray-50 rounded-lg">
+        <div class="grid grid-cols-3 gap-7 justify-center items-center py-8">
+          <div>
+            <span class="text-base leading-7 font-medium block mb-2 pb-0.5">Follow Us</span>
+            <ul class="flex">
+              <li class="flex items-center mr-3"><a href="#"
+                  class="text-center mx-auto flex items-center justify-center text-white bg-blue-900 h-8 w-8 rounded-full"><i
+                    class="fa-brands fa-facebook-f"></i></a></li>
+              <li class="flex items-center mr-3"><a href="#"
+                  class="text-center mx-auto flex items-center justify-center text-white bg-cyan-500 h-8 w-8 rounded-full"><i
+                    class="fa-brands fa-twitter"></i></a></li>
+              <li class="flex items-center mr-3"><a href="#"
+                  class="text-center mx-auto flex items-center justify-center text-white bg-red-600 h-8 w-8 rounded-full"><i
+                    class="fa-brands fa-pinterest"></i></a></li>
+              <li class="flex items-center mr-3"><a href="#"
+                  class="text-center mx-auto flex items-center justify-center text-white bg-cyan-700 h-8 w-8 rounded-full"><i
+                    class="fa-brands fa-linkedin-in"></i></a></li>
+              <li class="flex items-center mr-3"><a href="#"
+                  class="text-center mx-auto flex items-center justify-center text-white bg-green-500 h-8 w-8 rounded-full"><i
+                    class="fa-brands fa-whatsapp"></i></a></li>
+            </ul>
+          </div>
+          <div class="col-span-1 text-center hidden md:block">
+            <p class="text-base leading-7 font-medium block text-black">Call Us Today!</p>
+            <h5 class="text-2xl font-bold text-primary leading-7">+012345-67900</h5>
+          </div>
+          <div class="hidden md:block">
+            <ul class="text-right">
+              <li class="px-1 hover:opacity-80 transition inline-flex"><img src="img/payment-logo.webp" alt=""></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- footer copyright -->
+      <div class="px-3  flex justify-center py-4 mb-14 lg:mb-0">
+        <p class="text-sm leading-6">Copyright 2022 @ <a class="text-primary" href="#">HtmlLover</a>, All rights
+          reserved.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!------ sextion--bit---------- -->
+
+  <!-- modal-->
+  <div id="modal-wrapper" class="hidden fixed inset-0 bg-black bg-opacity-60 z-50 text-center">
+    <div class="inset-0 flex items-center justify-center h-full">
+      <div class="shadow-xl rounded-2xl w-[900px] h-auto overflow-hidden bg-white z-50 flex items-center">
+        <!-- bit-img-1 -->
+        <div class="flex justify-center items-center flex-shrink-0 h-auto cursor-pointer">
+          <img src="img/1.webp" class=" w-[420px] h-full">
+        </div>
+        <!-- bit-detiels -->
+        <div class="w-full flex flex-col p-8 text-left">
+          <div class="mb-2.5 block -mt-1.5">
+            <h1 class="text-heading text-lg md:text-xl lg:text-2xl hover:text-black cursor-pointer" href="#">Rainbow
+              Chard</h1>
+            <span
+              class="bg-emerald-100 text-primary rounded-full inline-flex items-center justify-center px-2 py-1 text-xs font-semibold mt-2">In
+              Stock</span>
+          </div>
+          <p class="text-sm leading-6 text-gray-500 md:leading-6">Most fresh vegetables are low in calories and have a
+            water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ...
+            The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include
+            asparagus and kohlrabi.</p>
+          <div class="flex items-center mt-4 font-bold">
+            <span class="inline-block text-2xl">$12</span>
+          </div>
+          <div class="flex items-center justify-between space-s-3 sm:space-s-4 w-full mt-4">
+            <div
+              class="group flex items-center justify-between rounded-md overflow-hidden flex-shrink-0 border h-11 md:h-12 border-gray-300">
+              <button
+                class="flex items-center justify-center flex-shrink-0 h-full transition duration-300 focus:outline-none w-8 md:w-12 text-heading border-e border-gray-300 hover:text-gray-500">
+                <span class="text-base">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+              </button>
+              <p
+                class="text-gray-900 flex items-center justify-center h-full transition-colors duration-250 cursor-default flex-shrink-0 text-base text-heading w-8 md:w-20 xl:w-24">
+                1</p>
+              <button
+                class="flex items-center justify-center h-full flex-shrink-0 transition duration-300 focus:outline-none w-8 md:w-12 text-heading border-s border-gray-300 hover:text-gray-500">
+                <span class="text-dark text-base">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <button
+              class="primary-btn leading-4 inline-flex items-center cursor-pointer transition duration-300 text-center justify-center border-0 border-transparent rounded-md focus-visible:outline-none focus:outline-non px-4 ml-4 md:px-6 lg:px-8 py-4 md:py-3.5 lg:py-4 hover:text-white w-full h-12">Add
+              To Cart</button>
+          </div>
+          <div class="flex flex-col mt-4">
+            <span class="font-semibold py-1 text-sm d-block">
+              <span class="text-gray-700">Category:</span>
+              <span class="text-gray-500">Fresh Vegetable</span>
+            </span>
+            <div class="flex flex-row">
+              <span
+                class="bg-gray-50 mr-2 border-0 text-gray-600 rounded-full inline-flex items-center justify-center px-3 py-1 text-xs font-semibold mt-2">rainbow-chard</span>
+              <span
+                class="bg-gray-50 mr-2 border-0 text-gray-600 rounded-full inline-flex items-center justify-center px-3 py-1 text-xs font-semibold mt-2">fresh
+                vegetable</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="absolute right-5 top-5">
+      <button id="close-modal"
+        class="inline-flex justify-center px-2 py-2 text-base font-medium text-red-500 bg-white border border-transparent rounded-full hover:bg-red-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+          stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+  
+  <!-- login-bar -->
+  <div id="login-wrapper" class="hidden fixed inset-0 bg-black bg-opacity-60 z-50 text-center">
+    <div class="inset-0 flex items-center justify-center h-full">
+      <div class="shadow-xl rounded-2xl w-[600px] h-[680px] overflow-hidden bg-white z-50 px-10 py-10">
+        <div class="text-center mb-6">
+          <h2 class="text-3xl font-bold">Login</h2>
+          <p class="text-sm md:text-base text-gray-500 mt-2 mb-8 sm:mb-10">Login with your email and password</p>
+        </div>
+        <form class="flex flex-col justify-center">
+          <div class="grid grid-cols-1 gap-5">
+            <div>
+              <label class="block text-gray-500 font-medium text-lg leading-none mb-2 text-left">Email</label>
+              <div class="flex items-center relative">
+                <span class="absolute top-3 left-2"><svg xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg></span>
+                <input class="w-full py-3 px-2 pl-12 rounded-md focus:outline-primary border border-gray-200"
+                  type="text" placeholder="Email">
+              </div>
+            </div>
+            <div>
+              <label class="block text-gray-500 font-medium text-lg leading-none mb-2 text-left">Password</label>
+              <div class="flex items-center relative">
+                <span class="absolute top-3 left-2"><svg xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  </svg></span>
+                <input class="w-full py-3 px-2 pl-12 rounded-md focus:outline-primary border border-gray-200"
+                  type="text" placeholder="Passwoed">
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex ms-auto">
+                <button type="button"
+                  class="text-end text-sm text-heading ps-3 underline hover:no-underline focus:outline-none">Forgot
+                  password?</button>
+              </div>
+            </div>
+            <button class="primary-btn rounded-md py-3 text-lg hover:bg-emerald-600">Login</button>
+            <span class="my-4 text-xl text-gray-800">OR</span>
+            <div class="flex justify-between">
+              <button class="bg-gray-100 py-3 px-10 rounded-md group hover:bg-blue-600 transition-all duration-200">
+                <i class="fa-brands fa-facebook-f text-gray-500 mr-2 group-hover:text-white"></i>
+                <span class="group-hover:text-white">Login With Facebook</span>
+              </button>
+              <button class="bg-gray-100 py-3 px-10 rounded-md group hover:bg-red-500 transition-all duration-200">
+                <i class="fa-brands fa-google text-gray-500 mr-2 group-hover:text-white"></i>
+                <span class="group-hover:text-white">Login With Google</span>
+              </button>
+            </div>
+            <div class="">
+              <span class="text-gray-500 mt-2.5">Not have a account ?</span>
+              <button class="text-gray-800 hover:text-primary font-bold mx-2">Register</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="absolute right-5 top-5">
+      <button id="close-login"
+        class="inline-flex justify-center px-2 py-2 text-base font-medium text-red-500 bg-white border border-transparent rounded-full hover:bg-red-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+          stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- fixed-btn -->
+  <button id="open-cart" class="absolute">
+    <div
+      class="right-0 w-35 float-right fixed top-2/4 bottom-2/4 align-middle shadow-lg cursor-pointer z-30 hidden lg:block xl:block">
+      <div class="flex flex-col items-center justify-center bg-indigo-50 rounded-tl-lg p-2 text-gray-700">
+        <span class="text-2xl mb-1 text-primary"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+          </svg></span>
+        <span class="px-2 text-sm font-medium">1 Items</span>
+      </div>
+      <div
+        class="flex flex-col items-center justify-center bg-primary-dark p-2 text-white text-base font-medium rounded-bl-lg">
+        $12.00</div>
+    </div>
+  </button>
+
+  <!-- shopping card -->
+  <div id="cart-wrapper" class="cart-wrap hidden fixed inset-0 bg-black bg-opacity-30 z-50">
+    <div class="absolute right-0 top-0 w-80 h-full bg-white">
+      <div class="flex flex-col w-full h-full justify-between items-middle rounded cursor-pointer">
+        <div class="flex justify-between items-center w-full px-5 py-4 border-b border-gray-100 bg-indigo-50">
+          <h2 class="flex items-center text-lg">
+            <span class="mr-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+              </svg>
+            </span>Shopping Cart</h2>
+          <button id="close-cart" class="flex items-center text-gray-500 hover:text-red-400 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd" />
+            </svg>
+            <span class="text-sm ml-1">Close</span>
+          </button>
+        </div>
+        <div class="h-full w-full">
+          <div class="w-full h-auto px-4 py-3 bg-whit flex justify-start items-center hover:bg-gray-50 transition">
+            <div
+              class="flex rounded-full border border-gray-100 shadow-sm overflow-hidden flex-shrink-0 cursor-pointer mr-3">
+              <img src="img/Rainbow-Chard-Package-per-lbbbbbbbb.jpg" class="">
+            </div>
+            <div class="flex flex-col w-full overflow-hidden">
+              <a class="text-sm font-medium text-gray-700" href="#">Rainbow Chard</a>
+              <span class="text-xs text-gray-400 mb-1">Item Price $12</span>
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-base leading-5">$12.00</span>
+                <div
+                  class="h-8 w-28 flex flex-wrap items-center justify-evenly p-1 border border-gray-100 bg-white text-gray-600 rounded-md">
+                  <button class="font-bold text-base">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </button>
+                  <p class="text-sm font-bold px-1">1</p>
+                  <button class="font-bold text-base">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd"
+                        d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </button>
+                </div>
+                <button class="text-red-400 text-lg cursor-pointer hover:text-red-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="h-full w-full border-t border-gray-100">
+            <div class="w-full h-auto px-4 py-3 bg-whit flex justify-start items-center hover:bg-gray-50 transition">
+              <div
+                class="flex rounded-full border border-gray-100 shadow-sm overflow-hidden flex-shrink-0 cursor-pointer mr-3">
+                <img src="img/ladddddu.webp" class="">
+              </div>
+              <div class="flex flex-col w-full overflow-hidden">
+                <a class="text-sm font-medium text-gray-700" href="#">Clementine</a>
+                <span class="text-xs text-gray-400 mb-1">Item Price $13</span>
+                <div class="flex items-center justify-between">
+                  <span class="font-bold text-base leading-5">$26.00</span>
+                  <div
+                    class="h-8 w-28 flex flex-wrap items-center justify-evenly p-1 border border-gray-100 bg-white text-gray-600 rounded-md">
+                    <button class="font-bold text-base">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                          clip-rule="evenodd" />
+                      </svg>
+                    </button>
+                    <p class="text-sm font-bold px-1">2</p>
+                    <button class="font-bold text-base">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                          d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                          clip-rule="evenodd" />
+                      </svg>
+                    </button>
+                  </div>
+                  <button class="text-red-400 text-lg cursor-pointer hover:text-red-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="w-full py-2 px-2 mx-2 my-3 rounded-lg bg-primary hover:bg-primary-dark flex items-center justify-between text-base text-white focus:outline-none transition duration-300">
+          <span class="align-middle font-medium">Proceed To Checkout</span>
+          <span class="rounded-lg font-bold py-1 px-2 bg-white text-primary-dark">$12.00</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    // header-Categories
+    var openItemscart = document.getElementById('open-itemscart')
+    var itemsCart = document.getElementById('items-cart')
+
+    let isCategoryOpen = false
+    openItemscart.addEventListener('click', function () {
+      if (isCategoryOpen === true) {
+        itemsCart.classList.add('hidden')
+        isCategoryOpen = false
+      } else {
+        itemsCart.classList.remove('hidden')
+        isCategoryOpen = true
+      }
+
+    })
+    // header-pages
+    var openPages = document.getElementById('open-pages')
+    var pagesDetails = document.getElementById('pages-details')
+
+    let ispagesOpen = false
+    openPages.addEventListener('click', function () {
+      if (ispagesOpen === true) {
+        pagesDetails.classList.add('hidden')
+        ispagesOpen = false
+      } else {
+        pagesDetails.classList.remove('hidden')
+        ispagesOpen = true
+      }
+
+    })
+
+
+
+
+
+    // fixed-btn-script
+    var openCart = document.getElementById('open-cart')
+    var cartWrapper = document.getElementById('cart-wrapper')
+    var closeCart = document.getElementById('close-cart')
+
+    openCart.addEventListener('click', function () {
+      cartWrapper.classList.remove('hidden')
+    })
+
+    closeCart.addEventListener('click', function () {
+      cartWrapper.classList.add('hidden')
+    })
+    // shoping-btn-script
+    var shopingBtn = document.getElementById('shoping-btn')
+    var cartWrapper = document.getElementById('cart-wrapper')
+    var closeCart = document.getElementById('close-cart')
+
+    shopingBtn.addEventListener('click', function () {
+      cartWrapper.classList.remove('hidden')
+    })
+
+    closeCart.addEventListener('click', function () {
+      cartWrapper.classList.add('hidden')
+    })
+
+    // click outside-shoping btn
+    document.addEventListener('click', function (e) {
+      if (e.target.classList.contains('cart-wrap')) {
+        cartWrapper.classList.add('hidden')
+      }
+    })
+
+    //  modal
+    var openModals = document.getElementsByClassName('open-modal')
+    var modalWrapper = document.getElementById('modal-wrapper')
+    var closeModal = document.getElementById('close-modal')
+
+    for (var x = 0; x < openModals.length; x++) {
+      openModals[x].addEventListener('click', function () {
+        modalWrapper.classList.remove('hidden')
+      })
+    }
+
+    closeModal.addEventListener('click', function(){
+      modalWrapper.classList.add('hidden')
+    })
+    
+     //  login-regestar
+     var loginRegestar = document.getElementsByClassName('login-regestar')
+    var loginWrapper = document.getElementById('login-wrapper')
+    var closeLogin = document.getElementById('close-login')
+
+    for (var x = 0; x < loginRegestar.length; x++) {
+      loginRegestar[x].addEventListener('click', function () {
+        loginWrapper.classList.remove('hidden')
+      })
+    }
+
+    closeLogin.addEventListener('click', function(){
+      loginWrapper.classList.add('hidden')
+    })
+  </script>
+
+</body>
+
+</html>
